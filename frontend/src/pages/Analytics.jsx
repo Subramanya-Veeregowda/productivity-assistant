@@ -53,10 +53,10 @@ function Analytics() {
 
   return (
 
-    <div className="p-6 space-y-8 max-w-6xl mx-auto">
+    <div className="p-8 space-y-8 max-w-6xl mx-auto">
 
       <h2 className="text-2xl md:text-3xl font-bold text-blue-500">
-        Task Analytics
+        <br /><br />Task Analytics📊
       </h2>
 
       {/* STATS CARDS */}

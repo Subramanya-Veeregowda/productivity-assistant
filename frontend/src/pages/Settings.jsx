@@ -11,13 +11,13 @@ useEffect(() => {
   }
 }, [darkMode])
   return (
-    <div className=" space-y-6">
+    <div className=" pt-6 space-y-6 p-8">
 
-      <h2 className="text-2xl md:text-3xl font-bold text-blue-600"><br />Settings</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-blue-600"><br /><br />Settings⚙️</h2>
 
       <div className="bg-blue-400/20 p-6 rounded-2xl shadow-xl">
         <h2 className="text-lg dark:text-white font-semibold mb-3">Appearance</h2>
-        <p className="text-gray-400">
+        <p className="text-black dark:text-white">
           Toggle between light and dark themes for your productivity workspace.
         </p>
 <button
@@ -35,11 +35,11 @@ useEffect(() => {
 
 <div className="bg-blue-400/20  p-6 rounded-2xl shadow-xl">
 
-  <h2 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+  <h2 className="text-lg font-semibold mb-3 text-black dark:text-white">
     Notifications
   </h2>
 
-  <p className="text-gray-700 dark:text-gray-300 mb-4">
+  <p className="text-black dark:text-white mb-4">
     Manage reminder notifications for upcoming tasks.
   </p>
 

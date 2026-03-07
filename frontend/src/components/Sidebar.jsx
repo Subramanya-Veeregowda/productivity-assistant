@@ -5,9 +5,9 @@ function Sidebar() {
 <div
 className="
 hidden md:block
-fixed top-15 left-0
+fixed top-15 left-0 right-0
 h-screen w-60
-bg-gray-200/60 dark:bg-gray-900/70
+bg-gray-400/60 dark:bg-gray-900/70
 backdrop-blur-lg
 border-r border-white/20
 text-gray-900 dark:text-gray-200

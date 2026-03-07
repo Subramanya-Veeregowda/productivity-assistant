@@ -136,14 +136,14 @@ function Dashboard() {
 
   return (
 
-    <div className="min-h-screen bg-transparent dark:from-gray-900 dark:to-gray-950 text-gray-900 dark:text-white">
+    <div className="min-h-screen pt-4 bg-gray-100 text-gray-900 backdrop-blur-lg dark:bg-gradient-to-br dark:from-gray-400 dark:to-gray-500 dark:text-white">
 
       <div className="flex flex-col md:flex-row">
 
         <div className="flex-1 p-6 md:p-10">
 
           <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-            Dashboard
+            <br />Dashboard🏳️‍🌈
           </h2>
 
 
@@ -153,11 +153,11 @@ function Dashboard() {
 <div className="bg-orange-100 text-orange-900 px-4 py-2 rounded-xl shadow mb-6 inline-flex items-center gap-2">
 
   <span className="font-semibold">
-    🔥 Productivity Streak
+     Productivity Streak
   </span>
 
   <span className="font-bold text-2xl text-right">
-    {streak} Days
+    {streak} Days 🔥
   </span>
 
 </div>                                     
@@ -173,7 +173,7 @@ function Dashboard() {
               Productivity Score
             </h3>
 
-            <p className="text-3xl font-bold text-green-600">
+            <p className="text-3xl font-bold text-green-500 dark:text-green-800">
               {productivityScore}%
             </p>
 

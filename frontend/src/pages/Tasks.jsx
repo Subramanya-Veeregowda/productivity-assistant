@@ -1,18 +1,45 @@
 import { useState, useEffect } from "react"
+import { getTasks, createTask, deleteTask} from "../services/taskService"
 import TaskCard from "../components/TaskCard"
 
 function Tasks() {
 
-  const [tasks, setTasks] = useState(() => {
-    const savedTasks = localStorage.getItem("tasks")
-    return savedTasks ? JSON.parse(savedTasks) : []
-  })
+  const [tasks, setTasks] = useState([])
 
   const [filter, setFilter] = useState("all")
 
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks))
-  }, [tasks])
+useEffect(() => {
+  loadTasks()
+}, [])
+
+const loadTasks = async () => {
+  try {
+    const data = await getTasks()
+    setTasks(data)
+  } catch (error) {
+    console.error("Error loading tasks:", error)
+  }
+}
+
+//add task fn
+const handleAddTask = async (task) => {
+  try {
+    await createTask(task)
+    loadTasks()
+  } catch (error) {
+    console.error("Error creating task:", error)
+  }
+}
+
+//delete task fn
+const handleDeleteTask = async (id) => {
+  try {
+    await deleteTask(id)
+    loadTasks()
+  } catch (error) {
+    console.error("Error deleting task:", error)
+  }
+}
 
 
   // FILTER LOGIC
@@ -36,10 +63,10 @@ function Tasks() {
 
 
   return (
-    <div className="p-6 text-white">
+    <div className="p-10 mt-3 text-white">
 
-      <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-        Task Manager
+      <h2 className=" text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+       <br />Task Manager
       </h2>
 
 
@@ -95,8 +122,7 @@ function Tasks() {
             <TaskCard
               key={task.id}
               task={task}
-              tasks={tasks}
-              setTasks={setTasks}
+              onDelete={handleDeleteTask}
             />
           ))
 

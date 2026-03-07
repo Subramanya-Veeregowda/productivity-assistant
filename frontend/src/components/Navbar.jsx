@@ -5,6 +5,11 @@ function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleLogout = () => {
+  localStorage.removeItem("token");
+  window.location.href = "/login";
+};
+
 useEffect(() => {
   if (darkMode) {
     document.documentElement.classList.add("dark")
@@ -26,7 +31,7 @@ useEffect(() => {
 
   return (
     <>
-<nav className="fixed w-full top-0 z-50 h-16 flex items-center justify-between px-4
+<nav className="fixed w-full top-0 z-50 h-25 flex items-center justify-between px-4
 bg-blue-400/20 dark:bg-gray-900/80
 backdrop-blur-lg
 border-b border-gray-200 dark:border-gray-700">
@@ -43,6 +48,8 @@ border-b border-gray-200 dark:border-gray-700">
 
   {/* RIGHT */}
   <div className="flex items-center gap-3 flex-shrink-0">
+
+
 
     {/* Theme toggle */}
 <button
@@ -63,29 +70,29 @@ border-b border-gray-200 dark:border-gray-700">
     >
       ☰
     </button>
-
+<br />
   </div>
 
 </nav>
 
       {/* Mobile Menu */}
 {menuOpen && (
-  <div className="fixed top-16 right-0 w-1/2 h-screen 
-backdrop-blur-lg bg-gray-200/40 dark:bg-gray-900/40
-border-l text-1xl border-white/20 shadow-xl
-md:hidden flex flex-col p-6 gap-4 z-50
-animate-[slideIn_.25s_ease] dark:text-white font-bold">
+  <div className="fixed top-16 right-0 w-1/2 h-screen backdrop-blur-lg bg-gray-200/40 dark:bg-gray-900/60
+                  border-l text-1xl border-white/20 shadow-xl md:hidden flex flex-col p-6 gap-4 z-50
+                  animate-[slideIn_.25s_ease] dark:text-white font-bold">
 
-<a href="/" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">Dashboard</a>
+<a href="/" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">🏳️‍🌈Dashboard</a>
 
-<a href="/tasks" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">Tasks</a>
+<a href="/tasks" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">📝Tasks</a>
 
-<a href="/analytics" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">Analytics</a>
+<a href="/analytics" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">📊Analytics</a>
 
-<a href="/focus" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">Focus</a>
+<a href="/focus" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">🎯Focus</a>
 
-<a href="/settings" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">Settings</a>
+<a href="/settings" className="transition-all duration-200 hover:text-blue-500 hover:text-2xl hover:-translate-x-1">⚙️Settings</a>
 
+<button onClick={handleLogout} className="transition-all duration-200 dark:text-red text-left hover:text-red-500 hover:text-2xl hover:-translate-x-1">❌ Logout</button>
+ 
   </div>
 )}
     </>

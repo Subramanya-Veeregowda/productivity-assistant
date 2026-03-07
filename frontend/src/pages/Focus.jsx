@@ -70,8 +70,8 @@ useEffect(() => {
   const isDanger = time <= totalTime * 0.05   
 
   return (
- <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-   <h1 className="text-2xl md:text-3xl font-bold text-blue-600 col-span-full">Focus</h1> 
+ <div className="mt-6 pt-8 p-8 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+   <h1 className="text-2xl md:text-3xl font-bold text-blue-600 col-span-full"><br /> Focus🎯</h1> 
     
   <div className="bg-blue-400/20 p-10 rounded-2xl shadow-2xl text-center w-full">
 
