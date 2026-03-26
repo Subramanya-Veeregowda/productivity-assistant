@@ -1,1 +1,1 @@
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=#9B26B6&size=30&center=false&vCenter=true&width=800&lines=Productivity+Assistant;Development+is+paused!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=3B82F6&size=30&center=false&vCenter=true&width=800&lines=Full+Stack+Developer;Java+Spring+Developer;React+Developer;Building+Scalable+Applications;DSA+CODER)
